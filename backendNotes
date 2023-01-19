@@ -1,0 +1,31 @@
+1. folders - repo n stuff
+2. node install
+3. file.js
+4. initiate the node project (npm init -y) package.json is created. (tracks dependencies) 
+5. npm install fastify (check 11.) 
+6. src folder to start the project
+7. npm install typescript -D (D is for development environment)
+8. time to teach node to read typescript - npx tsc --init (tsconfig.json typescript confguration file, we change the target to es2020)
+9. npm i tsx -D (instala dependencia de desenvolvimento que permite executar um arquivo do node com o ts sem precisar fazer converção (npx tsx file.ts) 
+10. package.json edition, "scripts":{ "dev":tsx watch src/server.ts" }
+11. import Fasfity from 'fastify' back-end api restful, criando e configurando rotas usando o fastify (fastify é analogo ao express)
+12. app.get('/',() => { return 'hello world'})  app.listen({port: 3333, })
+13. database - prisma (prisma é um orm). npm i -D prisma - npm i -D @prisma/client.
+14. npx prisma init --datasource-provider SQLite - defines a local database using SQLite.
+15. add model in schema, add id title and created_at for the model. id can be @id (key) and @default(uuid()) unique universal
+16. @@map("habits") to rename the table as we see fit. lowercase and plural.
+17. npx prisma migrate dev - le o schema.prisma e percebe automaticamente as tabelas e cria um arquivo sql que vai fazer as alterações no DB. (migrations for db is git for codes.)
+18. previous command created the dev.db
+19. npx prisma studio - to visualize the db. 
+20. add records to the tables
+21. import {PrismaClient} from '@prisma/client' - accessing the habit list from backend.
+22. const prisma = new PrismaClient()
+23. inside app.get -> const habits = prisma.habit.findMany({where:{title:{startsWith:{'push'}}}})
+24. await - async - since the database fetching takes time, and the page is loading, we need to say that the function is async, and add the 'await' to let node know we need to await that before delivering the page
+25. return habits - check the page.
+26. prisma is for typescript
+27. --------
+28. configuring CORS - mecanismo de segurança que diz quais aplicações vao acessar os dados dessa aplicação.
+29. install npm i fastify/cors
+30. import cors from '@fasfity/cors' - app.register(cors) 
+31. under app.register(cors) we can say who can access, leaving it open means anyonw can access.
