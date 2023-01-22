@@ -29,3 +29,9 @@
 29. install npm i fastify/cors
 30. import cors from '@fasfity/cors' - app.register(cors) 
 31. under app.register(cors) we can say who can access, leaving it open means anyonw can access.
+
+
+how to run:
+npm run dev - to run the back
+npx prisma studio - to visualize the db
+
