@@ -1,0 +1,9 @@
+1. vitejs template que traz pronto coisas que tudo que um frotend precisa. build. suporte ao js.
+2. back from server folder run npm create vite@latest - it will ask to download if not there yet.
+3. name the project (web) and select the techs (react - typescript)
+4. npm install - inside web folder to install dependencies and create the json file for web side. (package.json) react and react-dom
+5. npm run dev - already runs something, script for dev created by vite on package.json
+6. REACT IS A JAVASCRIPT LIBRARY FOR BUILDING WEB USER INTERFACE
+7. react renderize html - like any other frontend framework
+8. react chama o reactdom createRoot dentro da main.tsx - DOM é a conexão do react com o navegador, ele poderia querer se conectar com outras interfaces de usuario, como VR, TV, mobile, e pra cada uma existe um "DOM" respectivo.
+9. 
